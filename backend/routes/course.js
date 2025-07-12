@@ -7,8 +7,8 @@ const {
   getCourseById,
 } = require('../controllers/course');
 
-router.post('/', auth, createCourse);           // Create course (protected)
-router.get('/', getAllCourses);                 // Public: list all courses
-router.get('/:id', getCourseById);              // Public: get course by ID
+router.post('/', auth, createCourse);          
+router.get('/', getAllCourses);               
+router.get('/:id', getCourseById);             
 
 module.exports = router;
