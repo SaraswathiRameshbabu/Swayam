@@ -75,14 +75,6 @@ npm install
 npm run dev
 ```
 
----
-
-## 🔗 Local Access
-
-- Frontend: `http://localhost:5173`
-- Backend API: `http://localhost:5000/api`
-
----
 
 ## 👩‍💻 Author
 
