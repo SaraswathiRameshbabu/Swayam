@@ -5,6 +5,7 @@ const connectDB = require('./config/db');
 
 const authRoutes = require('./routes/auth');
 const courseRoutes = require('./routes/course');
+const enrollmentRoutes = require('./routes/enrollment');
 
 dotenv.config();        // Load environment variables from .env file
 connectDB();            // Connect to MongoDB
@@ -15,8 +16,9 @@ app.use(cors());                // Enable CORS
 app.use(express.json());        // Parse JSON bodies
 
 // Routes
-app.use('/api/auth', authRoutes);       // Register/Login/Profile
-app.use('/api/courses', courseRoutes);  // Course creation, listing, viewing
+app.use('/api/auth', authRoutes);       
+app.use('/api/courses', courseRoutes);  
+app.use('/api/enrollments', enrollmentRoutes);
 
 // Root endpoint (optional)
 app.get('/', (req, res) => {
